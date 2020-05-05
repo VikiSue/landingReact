@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,  { Suspense }  from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Components/scss/App.scss';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
+import FirstScreen from './Components/FirstScreen/FirstScreen';
+import SecondScreen from './Components/SecondScreen/SecondScreen';
+import Registration from './Components/Registration/Registration';
+import Loader from "./Components/Loader/Loader";
+const Users = React.lazy(() => import('./Components/Users/Users'));
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className="App">
+            <NavBar />
+            <main>
+                <FirstScreen />
+                <SecondScreen />
+                <Suspense fallback={<Loader/>}>
+                    <Users />
+                </Suspense>
+
+                <Registration />
+            </main>
+            <Footer />
+        </div>
+    );
+};
 
 export default App;

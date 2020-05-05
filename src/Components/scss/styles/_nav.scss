@@ -1,0 +1,94 @@
+
+.wrapper {
+    display: block;
+}
+.topBar {
+    height: 60px;
+    background-color: #ffffff;
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    li {
+        align-self: flex-end;
+        display: inline-block;
+    }
+    a {
+        font-size: 14px;
+        color: #000;
+        display: inline-block;
+        width: 100%;
+        @include links;
+    }
+}
+
+.sidebar {
+    min-width: 290px;
+    width: 30%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+
+    li {
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+    }
+    a {
+        display: block;
+        height: 5vh;
+        color: #000;
+        @include links;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99899;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.active {
+    display: block;
+    opacity: 1;
+}
+
+.dismiss {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.active-enter {
+    opacity: 0;
+}
+
+.active-enter.active-enter-active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+}
+
+.active-leave {
+    opacity: 1;
+}
+
+.active-leave.active-leave-active {
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+}

@@ -1,0 +1,30 @@
+@mixin links {
+  transition: all .2s ease-in;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+  &:active {
+    color: $secondary;
+  }
+}
+
+
+@mixin allCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin overflowElipsis ($num) {
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+@mixin overflow ($height) {
+  max-height: $height;
+  overflow: hidden;
+}
