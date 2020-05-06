@@ -142,7 +142,10 @@
     color: red;
 }
 
-.custom-file-label::after {
-    height: 38px !important;
-    line-height: 30px;
+.custom-file-label {
+    line-height: 20px;
+    &::after {
+        height: 38px !important;
+        line-height: 30px;
+    }
 }

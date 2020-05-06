@@ -15,7 +15,6 @@ const Registration = ({ registerUser, isLoading, showModal }) => {
         formData.append('phone', values.tel);
         formData.append('photo', values.photo);
         registerUser(formData);
-        console.log("DONE");
     };
 
     return (
