@@ -10,14 +10,17 @@ const FirstScreen = () => {
                         <h1 className="mb-3 sectionOne__title mt-5 title1">
                             Test assignment <br /> for Frontend <br /> Developer position
                         </h1>
-                        <p className="mb-3">
+                        <p className="mb-5">
                             We kindly remind you that your test assignment should be submitted as a
                             link to github/bitbucket repository. Please be patient, we consider and
                             respond to every application that meets minimum requirements. We look
                             forward to your submission. Good luck! The photo has to scale in the
                             banner area on the different screens
                         </p>
-                        <button className="button">Sing up now</button>
+                        <form action='#form'>
+                            <button type="submit" className="button" >Sing up now</button>
+                        </form>
+
                     </div>
                 </div>
             </div>

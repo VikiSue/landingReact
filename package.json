@@ -2,7 +2,7 @@
   "name": "landing-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vikisue.github.io/socialNet",
+  "homepage": "https://vikisue.github.io/landingReact",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "gh-pages": "^2.2.0",
     "husky": ">=1",
+    "image-webpack-loader": "^6.0.0",
     "prettier": "1.18.2",
     "pretty-quick": "^1.11.1",
     "react-redux": "^7.1.3",
@@ -35,7 +36,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

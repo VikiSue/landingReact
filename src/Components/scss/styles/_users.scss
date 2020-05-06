@@ -38,6 +38,9 @@
         margin-bottom: 12px;
         @include overflowElipsis(2);
     }
+    &__email {
+        @include overflowElipsis(1);
+    }
     &__link {
         color: #000;
         text-decoration: none;

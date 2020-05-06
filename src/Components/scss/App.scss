@@ -53,7 +53,7 @@ a {
     border: none;
     background-color: $primary;
     transition: all 0.2s ease-in;
-    outline: none;
+    outline: none!important;
     &--small {
         width: 80px;
     }
@@ -68,7 +68,7 @@ a {
 .flatBtn {
     height: 40px;
     outline: none;
-    border: none;
+    border: none!important;
     background-color: transparent;
     transition: color 0.2s ease-in;
     color: $primary;
@@ -92,6 +92,11 @@ section {
 p {
     @include overflowElipsis(5);
 }
+.hidden {
+    display: none;
+}
+
+//FIRST SCREEN
 .sectionOne {
     height: 100vh;
     padding-top: 20px;
@@ -111,9 +116,8 @@ p {
         text-transform: uppercase;
     }
 }
-.hidden {
-    display: none;
-}
+
+//SECOND SCREEN
 .sectionTwo {
     padding: 120px 0;
     @media screen and(max-width: 576px) {
